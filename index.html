@@ -4,41 +4,139 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>PIOU Gaëtan (CV)</title>
-		<style type="text/css">
+		<style>
+			@font-face {
+				font-family: 'cac_champagneregular';
+				src: url('./Polices/cac_champagne-webfont.eot');
+				src: url('./Polices/cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+					url('./Polices/cac_champagne-webfont.woff') format('woff'),
+					url('./Polices/cac_champagne-webfont.ttf') format('truetype'),
+					url('./Polices/cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+			}
+
 			body {
 				background: url(https://gifdb.com/images/high/crocodile-explosion-ol4n021nmb2panfr.gif) no-repeat center fixed;
 				background-size: 100% 100%;
+				margin-left: 10em;
+				margin-right: 10em;
+				margin-top: 10em;
+				perspective: 500px;
+				perspective-origin: center;
 			}
 
 			table {
-				border: black;
+				border-style: solid;
+				border-color: red;
+				background-image: url(https://i.ytimg.com/vi/TSr8WW4eKP4/maxresdefault.jpg);
+				background-size: 100% 100%;
+				color: cyan;
+				text-shadow: black 1px 1px 1px;
+				border-radius: 10px;
+				font: bolder;
 			}
 
 			table .formation {
 				background-color: #CC33FF;
+				padding-left: 50px;
+				clear: both;
+			}
+
+			tr {
+				border-style: solid;
+				border-color: yellow;
 			}
 
 			textarea {
-				background: url(https://media.discordapp.net/attachments/1303032839347900498/1344651607421358170/9logjh.jpg?ex=67c1afe5&is=67c05e65&hm=4ad5fe4d209ac5b7e2e8917cbde74defb138c7066e3554928c278ba0a587cdf5&=&format=webp);
+				background: url(./image.jpg);
 				color: red;
-				text-shadow: black;
+				text-shadow: #000 0px 0 2px;
 				font-weight: bold;
 				font-style: italic;
-				font-size: 50px;
+				font-size: 150%;
 			}
 
 			.maths:hover {
 				background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
 				background-clip: text;
 				color: transparent;
+				opacity: 50%;
 				font-weight: bolder;
 				font-style: italic;
+				animation-name: car1;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in;
 			}
 
 			#oui {
 				text-align: center;
 				font-size: 50%;
 			}
+
+			h2 {
+				font-family: 'cac_champagneregular';
+			}
+
+			img {
+				float: left;
+				animation-name: marge;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+			}
+
+			form input[type="text"] {
+				color: purple;
+				border-color: green
+			}
+
+			@keyframes marge {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			@keyframes car1 {
+				0% {
+					font-size: 100%;
+				}
+				25% {
+					font-size: 200%;
+				}
+				50% {
+					font-size: 50%;
+				}
+				75% {
+					font-size: 200%;
+				}
+				100% {
+					font-size: 100%;
+				}
+			}
+
+			h1:hover {
+				animation-name: spin;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes spin {
+				from {
+					transform: rotate3d(1, 0, 0, 0deg);
+				}
+				to {
+					transform: rotate3d(1, 0, 0, 360deg);
+				}
+			}
+
+			iframe {
+				width: 80%;
+			}
+
+
+
 		</style>
 	</head>
 	<body>
@@ -55,20 +153,22 @@
 		</header>
 
 		<h2>Études</h2>
-		<table border="">
+		<table>
 			<thead>
-				<th>
-					Année
-				</th>
-				<th>
-					Établissement
-				</th>
-				<th>
-					Diplôme<sub>(plôme)</sub>
-				</th>
-				<th>
-					État
-				</th>
+				<tr>
+					<th>
+						Année
+					</th>
+					<th>
+						Établissement
+					</th>
+					<th>
+						Diplôme<sub>(plôme)</sub>
+					</th>
+					<th>
+						État
+					</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr>
@@ -137,9 +237,11 @@
 				</tr>
 			</tbody>
 			<tfoot>
-				<td colspan="4" id="oui">
-					J'ai aussi passé le brevet
-				</td>
+				<tr>
+					<td colspan="4" id="oui">
+						J'ai aussi passé le brevet
+					</td>
+				</tr>
 			</tfoot>
 		</table>
 
@@ -168,12 +270,13 @@
 
 		<h5>Une autre page</h5>
 
-		<iframe src="./index.html" width="75%" height="480px">Kaka</iframe>
+		<iframe src="./index.html" width="1000" height="480"></iframe>
 
 		<h4>Me contacter</h4>
 
 		<form>
 			Votre nom : <input type="text" name="nom"><br>
+			Votre date de naissance : <input type="date" name="ddn"><br>
 			Raison du message <select>
 				<option>Proposition d'emploi</option>
 				<option>Message amical</option>
